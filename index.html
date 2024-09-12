@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login And Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="hero">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="showLogin()">Log In</button>
+          <button type="button" class="toggle-btn" onclick="showSignup()">Sign Up</button>
+        </div>
+
+
+        <div class="social-media-icons">
+          <img src="x icon.png" alt="X">
+          <img src="tiktok icon.png" alt="Tiktok">
+          <img src="instagram icon.png" alt="Instagram">
+          <img src="facebook icon.png" alt="Facebook">
+        </div>
+
+
+        <form id="login-form" class="input-group">
+          <input type="text" class="input-field" placeholder="Enter your username or email">
+          <input type="password" class="input-field" placeholder="Enter your password">
+          <div class="remember-me">
+              <input type="checkbox" id="remember">
+              <label for="remember">Remember me</label>
+          </div>
+
+
+          <div class="button-container">
+      
+      
+          <button type="button" class="forgot-password-btn">Forgot Password</button>
+      
+          <button type="submit" class="submit-btn">Login</button>
+        </div>
+
+
+      </form>
+
+        <!-- Signup Form -->
+<form id="signup-form" class="input-group" style="display:none;" action="/submit_signup" method="POST">
+  
+
+  <!-- Username -->
+  <input type="text" class="input-field" name="username" placeholder="Enter your username" required minlength="3">
+
+  <!-- Email -->
+  <input type="email" class="input-field" name="email" placeholder="Enter your email" required>
+
+  <!-- Password -->
+  <input type="password" class="input-field" name="password" placeholder="Enter your password" required minlength="6">
+
+  <!-- Confirm Password -->
+  <input type="password" class="input-field" name="confirm_password" placeholder="Confirm your password" required>
+
+  <!-- Terms and conditions -->
+  <label>
+    <input type="checkbox" name="terms" required> I agree to the <a href="#">Terms and Conditions</a>
+  </label>
+
+  <!-- Error message (if applicable) -->
+  <div class="error-message" style="display:none; color:red;">Passwords do not match</div>
+
+  <!-- Submit Button -->
+   
+  <button type="submit" class="submit-btn">Sign Up</button>
+</form>
+
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>  
+
+    
+</body>
+</html>

@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url('bi.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+/* Styling for the form box */
+.form-box {
+    width: 380px;
+    height: auto;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.form-box:hover {
+    transform: scale(1.05);
+    background-color: #f7f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.button-box {
+    width: 220px;
+    margin: 35px auto 25px; /* Added bottom margin for better spacing */
+    position: relative;
+    box-shadow: 0 0 30px 5px #007ACC;
+    border-radius: 10px;
+    background-color: #66B2FF;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    white-space: nowrap;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #48C9B0, #007ACC);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+/* Container for social media icons */
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto 25px;
+}
+
+.social-media-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 
+                0 1px 1px rgba(0, 0, 0, 0.1), 
+                inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.2);
+    background-color: #48C9B0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 
+                0 2px 2px rgba(0, 0, 0, 0.2), 
+                inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.login-form, .signup-form {
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 255, 0.2);
+}
+
+/* Style for the remember-me container */
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin: 15px 0; 
+    font-size: 14px;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.remember-me label {
+    cursor: pointer;
+    color: #333;
+    font-weight: 500;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 15px 0 25px;
+}
+
+/* Specific styling for the submit button (login button) */
+button.submit-btn {
+    background-color: #48C9B0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 48%;
+    text-align: center;
+    display: block;
+    transition: background-color 0.3s ease;
+   
+}
+
+
+button.submit-btn:hover {
+    background-color: #007ACC;
+}
+
+/* Specific styling for the forgot password button */
+button.forgot-password-btn {
+    background-color: #48C9B0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 48%;
+    text-align: center;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+button.forgot-password-btn:hover {
+    background-color: #007ACC;
+}
+
+
+input[type="checkbox"] {
+    accent-color: #007bff;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* General Reset for Responsive Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mobile Devices: 320px - 480px */
+@media only screen and (max-width: 480px) {
+
+    .form-box {
+        width: 90%;
+        margin: 10% auto;
+    }
+    
+    /* Adjust padding, margin, and font sizes for smaller screens */
+    .input-field {
+        padding: 8px;
+        margin: 8px 0;
+    }
+
+    /* Optimize image loading and navigation for mobile */
+    .social-media-icons img {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* Hamburger menu for navigation (Not currently applicable) */
+    .nav-menu {
+        display: none;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Ensure touch targets are appropriately sized */
+    button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Small Tablets and Phablets: 481px - 768px */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    
+    .form-box {
+        width: 80%;
+    }
+
+    /* Use two-column layouts */
+    .social-media-icons {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* Adjust font sizes for better readability */
+    .input-field {
+        font-size: 16px;
+    }
+
+    /* Ensure images are optimized for higher resolutions */
+    .social-media-icons img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Large Tablets and Small Laptops: 769px - 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Three-column layout where applicable */
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    /* Horizontal navigation bar */
+    .nav-menu {
+        display: block;
+        flex-direction: row;
+    }
+
+    /* Increase form width */
+    .form-box {
+        width: 70%;
+    }
+
+    /* Adjust padding and font sizes */
+    .input-field {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    button {
+        padding: 14px 22px;
+    }
+}
+
+/* Laptops and Desktops: 1025px - 1440px */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    /* Leverage larger screen space for multi-column layout */
+    .content {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    /* Increase font sizes and line heights for legibility */
+    body {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    /* Larger images with sharper quality */
+    .hero {
+        background-size: cover;
+    }
+
+    /* Prominent navigation */
+    .nav-menu {
+        justify-content: space-between;
+    }
+}
+
+/* Large Screens and Ultra-Wide Displays: 1441px and up */
+@media only screen and (min-width: 1441px) {
+    /* Introduce a maximum width to prevent layout stretching */
+    .content {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    /* Grid layouts for more complex structures */
+    .content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    /* Ensure proportional scaling of padding and margins */
+    .form-box {
+        width: 50%;
+        padding: 40px;
+    }
+
+    /* Allow media content to scale without distortion */
+    .social-media-icons img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* General Responsiveness Rules */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Query for Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* Fallbacks for older browsers */
+@supports not (display: grid) {
+    .content {
+        display: block;
+    }
+}
+
+
+
+
+
